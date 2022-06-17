@@ -21,4 +21,5 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
 
 My first milestone was plugging in and connecting the ultrasonic sensor. The ultrasonic sensor reports the distance between itself and the nearest obstacle by utilizing how quickly sound waves are inputted and outputted. I inserted the ultrasonic sensor into the breadboard and connected the male-to-male jumper wires into the Arduino. At first, the ultrasonic sensor was unresponsive, which I fixed through calling the delay() method between inputting and outputting the audio.
 
-[![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574117/video_to_markdown/images/youtube--CaCazFBhYKs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=CaCazFBhYKs "First Milestone"){:target="_blank" rel="noopener"}
+[![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655485582/video_to_markdown/images/youtube--KcmZJILX97M-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=KcmZJILX97M "First Milestone")
+{:target="_blank" rel = "noopener"}
