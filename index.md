@@ -1,5 +1,5 @@
 ﻿# Obstacle Avoiding Robot
-This will serve as a brief description of your project. Limit this to three sentences because it can become overly long at that point. This copy should draw the user in and make she/him want to read more.
+I designed an Arduino robot that can detect and maneuver around obstacles using an ultrasonic sensor. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
