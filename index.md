@@ -8,7 +8,7 @@ I designed an Arduino robot that can detect and maneuver around obstacles using 
 ![Headstone Image](https://bluestampengineering.com/wp-content/uploads/2016/05/improve.jpg)
   
 # Final Milestone
-My final milestone is completing the robot! I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a Servo to the ultrasonic sensor. When the robot stops, the Servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
+My final milestone is completing the robot! I attached the new motor to the wheel and soldered the wires in place. I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a Servo to the ultrasonic sensor. When the robot stops, the Servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
 
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
@@ -23,3 +23,6 @@ My first milestone is plugging in and connecting the ultrasonic sensor. The ultr
 
 [![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655485582/video_to_markdown/images/youtube--KcmZJILX97M-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=KcmZJILX97M "First Milestone")
 {:target="_blank" rel = "noopener"}
+
+# Reflection
+Through BlueStamp Engineering, I was able to learn more about robotics and create the obstacle avoiding robot. Sometimes, I had to troubleshoot, but I was able to persevere, understand the root cause of the issues, and solve them. I thought like an engineer -- brainstorming new solutions and going one step at a time -- in order to finish and add modifications to this project. In the future, I will apply both my passion and my acquired knowledge to add more modifications and create new projects!
