@@ -8,7 +8,7 @@ I designed an Arduino robot that can detect and maneuver around obstacles using 
 ![Headstone Image](https://bluestampengineering.com/wp-content/uploads/2016/05/improve.jpg)
   
 # Final Milestone
-My final milestone is programming the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a Servo to the ultrasonic sensor. When the robot stops, the Servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction.
+My final milestone is completing the robot! I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a Servo to the ultrasonic sensor. When the robot stops, the Servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
 
 [![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 
