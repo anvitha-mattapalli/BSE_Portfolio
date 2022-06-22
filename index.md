@@ -15,7 +15,7 @@ My final milestone is completing the robot! I attached the new motor to the whee
 # Second Milestone
 My second milestone is assembling the robot as well as programming it to move forward/backward and stop if an obstacle is within 10 inches. I connected the back motors to the front motors using wires and connected the front motors to the motor controller. The motor controller is attached to a battery pack and the Arduino is attached to a 9V battery so the robot does not depend on a laptop as a power source. I realized that one of the wheels was not functioning because the motor attached to the wheel had a broken copper wire. To solve this issue, I will attach a new motor.
 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
+[![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655936928/video_to_markdown/images/youtube--0JBKb5Npano-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/0JBKb5Npano "Second Milestone"){:target="_blank" rel="noopener"}
 # First Milestone
   
 
