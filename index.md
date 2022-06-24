@@ -3,7 +3,7 @@ I designed an Arduino robot that can detect and maneuver around obstacles using 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Anvitha Mattapalli | Monta Vista High School | Computer Science | Incoming Junior
+| Anvitha M. | Monta Vista High School | Computer Science | Incoming Junior
 
 ![Headstone Image]((https://ibb.co/jVGvDxm))
   
