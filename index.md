@@ -30,7 +30,7 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 ![Schematic](/schematic.png)
 
 # Source Code
-'''
+```
 #include <Servo.h>
 #include <SoftwareSerial.h>
 
@@ -235,4 +235,4 @@ void turnRight(){
   digitalWrite(leftMotorFor, LOW);
   digitalWrite(rightMotorBack, LOW);
 }
-'''
+```
