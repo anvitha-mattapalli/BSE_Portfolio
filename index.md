@@ -28,4 +28,4 @@ My first milestone is plugging in and connecting the ultrasonic sensor. The ultr
 Through BlueStamp Engineering, I was able to learn more about robotics and create the obstacle avoiding robot. Sometimes, I had to troubleshoot, but I was able to persevere, understand the root cause of the issues, and solve them. I thought like an engineer -- brainstorming new solutions and going one step at a time -- in order to finish and add modifications to this project. In the future, I will apply both my passion and my acquired knowledge to add more modifications and create new projects!
 
 # Schematic
-![Schematic](/images/schematic.png)
+![Schematic](/schematic.png)
