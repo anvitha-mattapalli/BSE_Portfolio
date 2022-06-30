@@ -1,2 +1,2 @@
-yml highlighter-theme: monokai
+remote_theme: benbalter/retlab
 markdown: kramdown
