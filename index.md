@@ -140,46 +140,47 @@ void loop()
     move = false; /** Prevents the autonomous characteristics of the robot to override the user's "stop" command */
   }
   delay(1000);
+  
   if(move)
   {
     float val = ultraSonicMeasure();
-    Serial.println(val);
-    if(val <= 10 && val > 0 || digitalRead(ir) == HIGH)
+    if(val <= 10 && val > 0 || digitalRead(ir) == HIGH) /** If obstacle within 10 inches or on the edge of the table */
     {
-      tone(piez,200);
+      tone(piez,200); /** Piezo buzzers buzzes */
       moveStop();
       delay(200);
       noTone(piez);
-      moveBackward();
+      moveBackward(); /** Moves backward so not to run into the obstacle */
       moveBackward();
       delay(200);
       moveStop();
       delay(200);
-      if(lookRight() >= lookLeft())
+      /** Determine the clearer path by choosing the larger distance between the robot and the nearest obstacle */
+      if(lookRight() >= lookLeft()) 
           turnRight();
       else
           turnLeft();
     }
     moveForward();
   }
-  command = "";
+  command = ""; /** Reset the command for each iteration */
 }
 
+/** Uses the ultrasonic sensor to determine the distance between the robot and the nearest obstacle */
 float ultraSonicMeasure()
 {
    float duration, inches, cm;
-   pinMode(trigPin, OUTPUT);
    digitalWrite(trigPin, LOW);
    delayMicroseconds(2);
-   digitalWrite(trigPin, HIGH);
+   digitalWrite(trigPin, HIGH); /** Emits a soundwave through the trig pin */
    delayMicroseconds(10);
    digitalWrite(trigPin, LOW);
-   pinMode(echoPin, INPUT);
-   duration = pulseIn(echoPin, HIGH);
-   inches = duration / 74.0 / 2;
+   duration = pulseIn(echoPin, HIGH); /** Finds the time taken to receive the soundwave through the echo pin */
+   inches = duration / 74.0 / 2; /** Converts the duration into inches using the speed of sound */
    return inches;
 }
 
+/** The servo turns to the right for the ultrasonic sensor to determine the distance between the robot and the nearest obstacle from the right direction */
 float lookRight()
 {
   servo.write(0);
@@ -191,6 +192,7 @@ float lookRight()
   return dist;
 }
 
+/** The servo turns to the left for the ultrasonic sensor to determine the distance between the robot and the nearest obstacle from the left direction */
 float lookLeft()
 {
   servo.write(90);
@@ -202,6 +204,7 @@ float lookLeft()
   return dist;
 }
 
+/** Turns all the motors off to stop */
 void moveStop()
 {
   digitalWrite(rightMotorFor, LOW);
@@ -211,6 +214,7 @@ void moveStop()
   digitalWrite(leftMotorBack, LOW);
 }
 
+/** Moves backward at maximum speed */
 void moveBackward()
 {
   digitalWrite(leftMotorFor, HIGH);
@@ -223,6 +227,7 @@ void moveBackward()
   analogWrite(rightMotorFor, 255);
 }
 
+/** Moves forward at maximum speed */
 void moveForward()
 {
   digitalWrite(leftMotorFor, LOW);
@@ -235,6 +240,7 @@ void moveForward()
   analogWrite(rightMotorBack, 255);
 }
 
+/** Turns left by turning alternate motors on */
 void turnLeft()
 {
   digitalWrite(leftMotorFor, HIGH);
@@ -244,6 +250,7 @@ void turnLeft()
   digitalWrite(rightMotorFor, LOW);
 }
 
+/** Turns right by turning alternate motors on */
 void turnRight(){
   digitalWrite(leftMotorBack, HIGH);
   digitalWrite(rightMotorFor, HIGH);
