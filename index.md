@@ -29,3 +29,211 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 
 # Schematic
 ![Schematic](/schematic.png)
+
+# Source Code
+'''
+#include <Servo.h>
+#include <SoftwareSerial.h>
+
+const int leftMotorFor = 7;
+const int leftMotorBack = 6;
+const int rightMotorFor = 4;
+const int rightMotorBack = 5;
+
+const int trigPin = 9;
+const int echoPin = 8;
+
+const int ir = 13;
+const int piez = 12;
+
+Servo servo;
+String command;
+boolean move = true;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+  servo.attach(10);
+  servo.write(45);
+  
+  pinMode(rightMotorFor, OUTPUT);
+  pinMode(leftMotorFor, OUTPUT);
+  pinMode(rightMotorBack, OUTPUT);
+  pinMode(leftMotorBack, OUTPUT);
+
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+
+  pinMode(piez, OUTPUT);
+  checkStart();
+}
+
+void checkStart()
+{
+  do
+  {
+    command = "";
+    while(Serial.available())
+    {
+      delay(10);
+      char c = Serial.read();
+      command += c;
+      if(c == '#')
+        break;
+    }
+  } while(command != "*start#");
+}
+
+void loop()
+{ 
+  while(Serial.available())
+  {
+    delay(10);
+    char c = Serial.read();
+    command += c;
+    if(c == '#')
+      break;
+  }
+  if(command == "*forward#")
+  {
+    moveForward();
+    move = true;
+  }
+  else if(command == "*backward#")
+  {
+    moveBackward();
+    move = true;
+  }
+  else if(command == "*left#")
+  {
+    turnLeft();
+    move = true;
+  }
+  else if(command == "*right#")
+  {
+    turnRight();
+    move = true;
+  }
+  else if(command == "*stop#")
+  {
+    moveStop();
+    move = false;
+  }
+  delay(1000);
+  if(move)
+  {
+    float val = ultraSonicMeasure();
+    Serial.println(val);
+    if(val <= 10 && val > 0 || digitalRead(ir) == HIGH)
+    {
+      tone(piez,200);
+      moveStop();
+      delay(200);
+      noTone(piez);
+      moveBackward();
+      moveBackward();
+      delay(200);
+      moveStop();
+      delay(200);
+      if(lookRight() >= lookLeft()) 
+      {
+          turnRight();
+      }
+      else
+      { 
+          turnLeft();
+      }
+    }
+    moveForward();
+  }
+  command = "";
+}
+
+float ultraSonicMeasure()
+{
+   float duration, inches, cm;
+   pinMode(trigPin, OUTPUT);
+   digitalWrite(trigPin, LOW);
+   delayMicroseconds(2);
+   digitalWrite(trigPin, HIGH);
+   delayMicroseconds(10);
+   digitalWrite(trigPin, LOW);
+   pinMode(echoPin, INPUT);
+   duration = pulseIn(echoPin, HIGH);
+   inches = duration / 74.0 / 2;
+   return inches;
+}
+
+float lookRight()
+{
+  servo.write(0);
+  delay(500);
+  int dist = ultraSonicMeasure();
+  delay(100);
+  servo.write(90);
+  delay(100);
+  return dist;
+}
+
+float lookLeft()
+{
+  servo.write(90);
+  delay(500);
+  int dist = ultraSonicMeasure();
+  delay(100);
+  servo.write(45);
+  delay(100);
+  return dist;
+}
+
+void moveStop()
+{
+  digitalWrite(rightMotorFor, LOW);
+  digitalWrite(leftMotorFor, LOW);
+  
+  digitalWrite(rightMotorBack, LOW);
+  digitalWrite(leftMotorBack, LOW);
+}
+
+void moveBackward()
+{
+  digitalWrite(leftMotorFor, HIGH);
+  digitalWrite(rightMotorFor, HIGH);
+
+  digitalWrite(leftMotorBack, LOW);
+  digitalWrite(rightMotorBack, LOW);
+
+  analogWrite(leftMotorFor, 255);
+  analogWrite(rightMotorFor, 255);
+}
+
+void moveForward()
+{
+  digitalWrite(leftMotorFor, LOW);
+  digitalWrite(rightMotorFor, LOW);
+
+  digitalWrite(leftMotorBack, HIGH);
+  digitalWrite(rightMotorBack, HIGH);
+
+  analogWrite(leftMotorBack, 255);
+  analogWrite(rightMotorBack, 255);
+}
+
+void turnLeft()
+{
+  digitalWrite(leftMotorFor, HIGH);
+  digitalWrite(rightMotorBack, HIGH);
+  
+  digitalWrite(leftMotorBack, LOW);
+  digitalWrite(rightMotorFor, LOW);
+}
+
+void turnRight(){
+  digitalWrite(leftMotorBack, HIGH);
+  digitalWrite(rightMotorFor, HIGH);
+  
+  digitalWrite(leftMotorFor, LOW);
+  digitalWrite(rightMotorBack, LOW);
+}
+'''
