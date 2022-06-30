@@ -70,36 +70,42 @@ void setup()
   pinMode(trigPin, OUTPUT); /** The trig pin of the ultrasonic sensor emits soundwaves */
   pinMode(echoPin, INPUT); /** The echo pin of the ultrasonic sensor receives soundwaves */
 
-  pinMode(piez, OUTPUT);
+  pinMode(piez, OUTPUT); /** The piez buzzer is an output */
   checkStart();
 }
 
+/** The robot will only begin moving once the user says "start" */
 void checkStart()
 {
   do
   {
     command = "";
-    while(Serial.available())
+    while(Serial.available()) /** The user is speaking */
     {
       delay(10);
       char c = Serial.read();
-      command += c;
-      if(c == '#')
+      command += c; /** Add each character one by one to the command field */
+      if(c == '#') /** '#' is the end character, representing that the user has stopped speaking */
         break;
     }
-  } while(command != "*start#");
+  } while(command != "*start#"); /** Exit the method once the user says "start" */
 }
 
+/** 
+ * Continuously executes the command inputted by the user. If there is an obstacle within 5 inches, the buzzer will ring. The robot looks to the right
+ * and left and goes in the direction with the clearer path.
+ */
 void loop()
 { 
-  while(Serial.available())
+  while(Serial.available()) /** The user is speaking */
   {
     delay(10);
     char c = Serial.read();
-    command += c;
-    if(c == '#')
+    command += c; /** Add each character one by one to the command field */
+    if(c == '#') /** '#' is the end character, representing that the user has stopped speaking */
       break;
   }
+  /** Calls the respective method based on the inputted command */
   if(command == "*forward#")
   {
     moveForward();
@@ -123,7 +129,7 @@ void loop()
   else if(command == "*stop#")
   {
     moveStop();
-    move = false;
+    move = false; /** Prevents the autonomous characteristics of the robot to override the user's "stop" command */
   }
   delay(1000);
   if(move)
