@@ -33,7 +33,7 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 ```
 #include <Servo.h>
 
-const int leftMotorFor = 7; /** The forward left motor is connected to Arduino digital pin 7 */
+const int leftMotorFor = 7; @@ /** The forward left motor is connected to Arduino digital pin 7 */ @@
 const int leftMotorBack = 6; /** The backward left motor is connected to Arduino digital pin 6 */
 const int rightMotorFor = 4; /** The forward right motor is connected to Arduino digital pin 4 */
 const int rightMotorBack = 5; /** The backward right motor is connected to Arduino digital pin 5 */
