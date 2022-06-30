@@ -1,4 +1,3 @@
-remote_theme: thundergolfer/junior-theme
+theme: jekyll-theme-merlot
 markdown: kramdown
 
-theme: jekyll-theme-merlot
