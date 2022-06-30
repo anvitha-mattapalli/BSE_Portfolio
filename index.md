@@ -32,37 +32,38 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 # Source Code
 ```
 #include <Servo.h>
-#include <SoftwareSerial.h>
 
-const int leftMotorFor = 7;
-const int leftMotorBack = 6;
-const int rightMotorFor = 4;
-const int rightMotorBack = 5;
+const int leftMotorFor = 7; /** The forward left motor is connected to Arduino digital pin 7 */
+const int leftMotorBack = 6; /** The backward left motor is connected to Arduino digital pin 6 */
+const int rightMotorFor = 4; /** The forward right motor is connected to Arduino digital pin 4 */
+const int rightMotorBack = 5; /** The backward right motor is connected to Arduino digital pin 5 */
 
-const int trigPin = 9;
-const int echoPin = 8;
+const int trigPin = 9; /** The trig pin of the ultrasonic sensor is connected to Arduino digital pin 9 */
+const int echoPin = 8; /** The echo pin of the ultrasonic sensor is connected to Arduino digital pin 8 */
 
-const int ir = 13;
-const int piez = 12;
+const int ir = 13; /** The infrared sensor is connected to Arduino digital pin 13 */
+const int piez = 12; /** The piezo buzzer is connected to Arduino digital pin 12 */
 
-Servo servo;
-String command;
-boolean move = true;
+Servo servo; /** The servo */
+String command; /** The voice command inputted by the user through an Android device */
+boolean move = true; /** Whether the robot should be moving or not */
 
+/** Sets up the hardware, labelling them as output or input */
 void setup()
 {
   Serial.begin(9600);
   
-  servo.attach(10);
-  servo.write(45);
+  servo.attach(10); /** The servo is connected to Arduino digital pin 10 */
+  servo.write(45); /** The servo is at 45 degrees, which is straight */
   
+  /** The four motors are output */
   pinMode(rightMotorFor, OUTPUT);
   pinMode(leftMotorFor, OUTPUT);
   pinMode(rightMotorBack, OUTPUT);
   pinMode(leftMotorBack, OUTPUT);
 
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT); /** The trig pin of the ultrasonic sensor emits soundwaves */
+  pinMode(echoPin, INPUT); /** The echo pin of the ultrasonic sensor receives soundwaves */
 
   pinMode(piez, OUTPUT);
   checkStart();
@@ -135,14 +136,10 @@ void loop()
       delay(200);
       moveStop();
       delay(200);
-      if(lookRight() >= lookLeft()) 
-      {
+      if(lookRight() >= lookLeft())
           turnRight();
-      }
       else
-      { 
           turnLeft();
-      }
     }
     moveForward();
   }
