@@ -1,3 +1,4 @@
+# Object Avoiding Robot
 I designed a 4 wheel Arduino robot that can detect and maneuver around obstacles using an ultrasonic sensor. From this base project, I implemented voice control via HC-05 Bluetooth module and edge-avoiding characteristicsc with an infrared sensor.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
