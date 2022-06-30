@@ -1,2 +1,4 @@
 remote_theme: thundergolfer/junior-theme
 markdown: kramdown
+
+theme: jekyll-theme-merlot
