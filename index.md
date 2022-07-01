@@ -149,7 +149,7 @@ void loop()
   else if(command == "*stop#")
   {
     moveStop();
-    move = false; /** Prevents the autonomous characteristics of the robot to override the user's "stop" command */
+    move = false; /** Prevents the autonomous characteristics of the robot from overriding the user's "stop" command */
   }
   delay(1000);
   
