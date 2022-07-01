@@ -34,20 +34,20 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 
 -------------------------------------------------------------------------------------------
 # Materials
-* [ ]Arduino UNO
-* [ ]L298N Motor Controller
-* [ ]Smart Car Chassis Kit
-  * [ ]4 DC motors and wheels
-* [ ]HC-SR04 Ultrasonic Sensor
-* [ ]SG90 Micro Servo
-* [ ]HC-05 Bluetooth Module
-* [ ]HW201 Infrared Sensor
-* [ ]Piezo Buzzer
-* [ ]Jumper Wires
-  * [ ]Male-to-Male
-  * [ ]Male-to-Female
-* [ ]Battery Pack
-* [ ]9V Battery
+- [ ]Arduino UNO
+- [ ]L298N Motor Controller
+- [ ]Smart Car Chassis Kit
+  - [ ]4 DC motors and wheels
+- [ ]HC-SR04 Ultrasonic Sensor
+- [ ]SG90 Micro Servo
+- [ ]HC-05 Bluetooth Module
+- [ ]HW201 Infrared Sensor
+- [ ]Piezo Buzzer
+- [ ]Jumper Wires
+  - [ ]Male-to-Male
+  - [ ]Male-to-Female
+- [ ]Battery Pack
+- [ ]9V Battery
 
 -------------------------------------------------------------------------------------------
 # Schematic
