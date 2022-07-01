@@ -19,10 +19,13 @@ My second modification was edge-avoiding features. The servo allows the ultrason
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Third Milestone
+
 My third milestone is completing the obstacle avoiding robot! I attached the new motor to the wheel and soldered all the wires in place. First, I programmed the robot to be able to turn left and right. To turn right, the left two motors are turned on and to turn left, the right two motors are turned on. Next, I coded the robot to be able to decide whether to turn left or right when confronted with an obstacle depending on which direction has the clearer path. To do this, I attached the ultrasonic sensor on top of an SG90 micro servo. A servo is able to rotate a specified number of degrees. When the robot stops, the servo will turn 45 degrees to the left and right. In each direction, the ultrasonic sensor returns the distance between the robot an the nearest obstacle. The robot turns in the direction with the farther obstacle and continues moving forward until the next obstacle is reached.
+
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Second Milestone
+
 My second milestone is assembling the robot as well as programming it to move forward/backward and stop if an obstacle is within 10 inches. I connected the back DC motors to the front DC motors using wires and connected the front motors to the L298N motor controller. To do this, the wires have to be attached to a thin copper ring on the DC motor. For one of my motors, this ring was broken, causing the wheel to remain stationary. I will solve this issue by attaching a new motor. The motor controller is then attached to a battery pack, and the Arduino is attached to a 9V battery; as a result, the robot does not depend on a laptop as a power source. 
 
 Certain motors are turned on and off through the digitalWrite() method in order to move forward and backward and to stop. For every iteration, before the moveForward() method is called, the ultrasonic sensor returns the distance between the robot and the nearest obstacle. If the distance is within 10 inches, the robot will stop. For my next milestone, I will add the decision-making feature to turn left or right after stopping at an obstacle.
@@ -31,9 +34,10 @@ Certain motors are turned on and off through the digitalWrite() method in order 
 -------------------------------------------------------------------------------------------
 # First Milestone
   
-
 My first milestone is plugging in and connecting the HC-SR04 ultrasonic sensor. The ultrasonic sensor emits sound waves at a frequency above human hearing through the trig pin. The sound waves bounce off of the nearest obstacle and are received again by the echo pin of the ultrasonic sensor. If the sensor is not properly functioning, call the delay() method in between outputting and inputting the sound. This duration of emitting and receiving soundwaves can be converted into the distance the robot is from the nearest obstacle by using the formula:
+
 > distance = (speed of sound)(time taken)/2
+
 I inserted the ultrasonic sensor into the breadboard and connected the male-to-male jumper wires into the Arduino. Later, I will remove the ultrasonic sensor from the breadboard and use male-to-female jumper wires so the ultrasonic sensor can be in any location.
 
 [![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655485582/video_to_markdown/images/youtube--KcmZJILX97M-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=KcmZJILX97M "First Milestone")
