@@ -12,25 +12,29 @@ I designed a 4 wheel autonomous Arduino robot that can detect and maneuver aroun
 ![Headstone Image](/robot.png)
 -------------------------------------------------------------------------------------------  
 # Third Milestone
-My third milestone is completing the robot! I attached the new motor to the wheel and soldered the wires in place. I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a servo to the ===ultrasonic sensor===. When the robot stops, the servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
+My third milestone is completing the robot! I attached the new motor to the wheel and soldered the wires in place. I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a servo to the ultrasonic sensor. When the robot stops, the servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
 
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Second Milestone
-My second milestone is assembling the robot as well as programming it to move forward/backward and stop if an obstacle is within 10 inches. I connected the back motors to the front motors using wires and connected the front motors to the motor controller. The motor controller is attached to a battery pack and the Arduino is attached to a 9V battery so the robot does not depend on a laptop as a power source. I realized that one of the wheels was not functioning because the motor attached to the wheel had a broken copper wire. To solve this issue, I will attach a new motor.
+My second milestone is assembling the robot as well as programming it to move forward/backward and stop if an obstacle is within 10 inches. I connected the back DC motors to the front DC motors using wires and connected the front motors to the L298N motor controller. To do this, the wires have to be attached to a thin copper ring on the DC motor. For one of my motors, this ring was broken, causing the wheel to remain stationary. I will solve this issue by attaching a new motor. The motor controller is then attached to a battery pack, and the Arduino is attached to a 9V battery; as a result, the robot does not depend on a laptop as a power source. 
+
+Certain motors are turned on and off through the digitalWrite() method in order to move forward and backward and to stop. For every iteration, before the moveForward() method is called, the ultrasonic sensor returns the distance between the robot and the nearest obstacle. If the distance is within 10 inches, the robot will stop. For my next milestone, I will add the decision-making feature to turn left or right after stopping at an obstacle.
 
 [![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655936928/video_to_markdown/images/youtube--0JBKb5Npano-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/0JBKb5Npano "Second Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # First Milestone
   
 
-My first milestone is plugging in and connecting the ultrasonic sensor. The ultrasonic sensor reports the distance between itself and the nearest obstacle by utilizing how quickly sound waves are inputted and outputted. I inserted the ultrasonic sensor into the breadboard and connected the male-to-male jumper wires into the Arduino. At first, the ultrasonic sensor was unresponsive, which I fixed through calling the delay() method between inputting and outputting the audio.
+My first milestone is plugging in and connecting the HC-SR04 ultrasonic sensor. The ultrasonic sensor emits sound waves at a frequency above human hearing through the trig pin. The sound waves bounce off of the nearest obstacle and are received again by the echo pin of the ultrasonic sensor. If the sensor is not properly functioning, call the delay() method in between outputting and inputting the sound. This duration of emitting and receiving soundwaves can be converted into the distance the robot is from the nearest obstacle by using the formula:
+> distance = (speed of sound)(time taken)/2
+I inserted the ultrasonic sensor into the breadboard and connected the male-to-male jumper wires into the Arduino. Later, I will remove the ultrasonic sensor from the breadboard and use male-to-female jumper wires so the ultrasonic sensor can be in any location.
 
 [![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655485582/video_to_markdown/images/youtube--KcmZJILX97M-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=KcmZJILX97M "First Milestone")
 {:target="_blank" rel = "noopener"}
 -------------------------------------------------------------------------------------------
 # Reflection
-Through BlueStamp Engineering, I was able to learn more about robotics and create the obstacle avoiding robot. Sometimes, I had to troubleshoot, but I was able to persevere, understand the root cause of the issues, and solve them. I thought like an engineer -- brainstorming new solutions and going one step at a time -- in order to finish and add modifications to this project. In the future, I will apply both my passion and my acquired knowledge to add more modifications and create new projects!
+Through BlueStamp Engineering, I was able to learn more about robotics and create the obstacle avoiding robot. Sometimes, I had to troubleshoot, but I was able to persevere, understand the root cause of the issues, and think out-of-the-box to solve them. I thought like an engineer -- brainstorming new solutions and going one step at a time -- in order to finish and add modifications to this project. In the future, I will apply both my passion and my acquired knowledge to add more modifications and create new projects!
 
 -------------------------------------------------------------------------------------------
 # Materials
