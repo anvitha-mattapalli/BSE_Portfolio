@@ -31,6 +31,23 @@ My first milestone is plugging in and connecting the ultrasonic sensor. The ultr
 # Reflection
 Through BlueStamp Engineering, I was able to learn more about robotics and create the obstacle avoiding robot. Sometimes, I had to troubleshoot, but I was able to persevere, understand the root cause of the issues, and solve them. I thought like an engineer -- brainstorming new solutions and going one step at a time -- in order to finish and add modifications to this project. In the future, I will apply both my passion and my acquired knowledge to add more modifications and create new projects!
 
+-------------------------------------------------------------------------------------------
+# Materials
+* Arduino UNO
+* L298N Motor Controller
+* Smart Car Chassis Kit
+  * 4 DC motors and wheels
+* HC-SR04 Ultrasonic Sensor
+* SG90 Micro Servo
+* HC-05 Bluetooth Module
+* HW201 Infrared Sensor
+* Piezo Buzzer
+* Jumper Wires
+  * Male-to-Male
+  * Male-to-Female
+* Battery Pack
+* 9V Battery
+
 # Schematic
 ![Schematic](/schematic.png)
 
