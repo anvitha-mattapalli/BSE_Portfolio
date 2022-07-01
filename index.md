@@ -12,21 +12,35 @@ I designed a 4 wheel, autonomous Arduino robot that can detect and maneuver arou
 ![Headstone Image](/robot.png)
 -------------------------------------------------------------------------------------------  
 # Final Milestone
-My final milestone is adding modifications to improve my obstacle avoiding robot! First, I implemented voice control via the HC-05 Bluetooth module. This Bluetooth module is able to connect to any Android devide. Through the "BT Arduino Voice Control" app on Google Play Store, the user can speak any command, and it will be received by the robot. As of date, the robot is able to stop, turn left, turn right, move forward, and move backward with voice commands. Usually, an Arduino will immediately begin running the code uploaded onto it upon being powered. I added an extra "start" command so the robot will only begin to move once the user says "start" into their devide.
+My final milestone is adding modifications to improve my obstacle avoiding robot! First, I implemented voice control via the HC-05 Bluetooth module. 
+> This HC-05 Bluetooth module is able to connect to any Android device. 
 
-My second modification was edge-avoiding features. The servo allows the ultrasonic sensor to turn left and right, but not up and down. As a result, the robot is unable to determine if it is about to fall off an edge. To fix this, I incorporated an HW201 infrared sensor. The infrared sensor functions similar to the ultrasonic sensor, emitting and receiving infrared radiation that bounces off of the nearest obstacle. I pointed this sensor downwards so the sensor will always report the distance between the robot and the ground. The infrared sensor returns either LOW or HIGH, with LOW representing a low distance and HIGH representing a high distance. If there is a high distance between the robot and the ground, the robot is about to fall off an edge, so the robot moves backward and turns to the left or right depending on which direction has the clearer path.
+Through the "BT Arduino Voice Control" app on Google Play Store, the user can speak any command, and it will be received by the robot. As of date, the robot is able to stop, turn left, turn right, move forward, and move backward with voice commands. Usually, an Arduino will immediately begin running the code uploaded onto it upon being powered. I added an extra "start" command so the robot will only begin to move once the user says "start" into their devide.
+
+My second modification was edge-avoiding features. The servo allows the ultrasonic sensor to turn left and right, but not up and down. As a result, the robot is unable to determine if it is about to fall off an edge. To fix this, I incorporated an HW201 infrared sensor. 
+
+> The HW201 infrared sensor functions similar to the ultrasonic sensor, emitting and receiving infrared radiation that bounces off of the nearest obstacle. 
+
+I pointed this sensor downwards so the sensor will always report the distance between the robot and the ground. The infrared sensor returns either LOW or HIGH, with LOW representing a low distance and HIGH representing a high distance. If there is a high distance between the robot and the ground, the robot is about to fall off an edge, so the robot moves backward and turns to the left or right depending on which direction has the clearer path.
 
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Third Milestone
 
-My third milestone is completing the obstacle avoiding robot! I attached the new motor to the wheel and soldered all the wires in place. First, I programmed the robot to be able to turn left and right. To turn right, the left two motors are turned on and to turn left, the right two motors are turned on. Next, I coded the robot to be able to decide whether to turn left or right when confronted with an obstacle depending on which direction has the clearer path. To do this, I attached the ultrasonic sensor on top of an SG90 micro servo. A servo is able to rotate a specified number of degrees. When the robot stops, the servo will turn 45 degrees to the left and right. In each direction, the ultrasonic sensor returns the distance between the robot an the nearest obstacle. The robot turns in the direction with the farther obstacle and continues moving forward until the next obstacle is reached.
+My third milestone is completing the obstacle avoiding robot! I attached the new motor to the wheel and soldered all the wires in place. First, I programmed the robot to be able to turn left and right. To turn right, the left two motors are turned on and to turn left, the right two motors are turned on. Next, I coded the robot to be able to decide whether to turn left or right when confronted with an obstacle depending on which direction has the clearer path. To do this, I attached the ultrasonic sensor on top of an SG90 micro servo. 
+> An SG90 micro servo is able to rotate a specified number of degrees. 
+
+When the robot stops, the servo will turn 45 degrees to the left and right. In each direction, the ultrasonic sensor returns the distance between the robot an the nearest obstacle. The robot turns in the direction with the farther obstacle and continues moving forward until the next obstacle is reached.
 
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Second Milestone
 
-My second milestone is assembling the robot as well as programming it to move forward/backward and stop if an obstacle is within 10 inches. I connected the back DC motors to the front DC motors using wires and connected the front motors to the L298N motor controller. To do this, the wires have to be attached to a thin copper ring on the DC motor. For one of my motors, this ring was broken, causing the wheel to remain stationary. I will solve this issue by attaching a new motor. The motor controller is then attached to a battery pack, and the Arduino is attached to a 9V battery; as a result, the robot does not depend on a laptop as a power source. 
+My second milestone is assembling the robot as well as programming it to move forward/backward and stop if an obstacle is within 10 inches. I connected the back DC motors to the front DC motors using wires and connected the front motors to the L298N motor driver. 
+
+> The L298N motor driver can control the speed and direction of up to 4 motors.
+
+To do this, the wires have to be attached to a thin copper ring on the DC motor. For one of my motors, this ring was broken, causing the wheel to remain stationary. I will solve this issue by attaching a new motor. The motor driver is then attached to a battery pack, and the Arduino is attached to a 9V battery; as a result, the robot does not depend on a laptop as a power source. 
 
 Certain motors are turned on and off through the digitalWrite() method in order to move forward and backward and to stop. For every iteration, before the moveForward() method is called, the ultrasonic sensor returns the distance between the robot and the nearest obstacle. If the distance is within 10 inches, the robot will stop. For my next milestone, I will add the decision-making feature to turn left or right after stopping at an obstacle.
 
@@ -34,7 +48,7 @@ Certain motors are turned on and off through the digitalWrite() method in order 
 -------------------------------------------------------------------------------------------
 # First Milestone
   
-My first milestone is plugging in and connecting the HC-SR04 ultrasonic sensor. The ultrasonic sensor emits sound waves at a frequency above human hearing through the trig pin. The sound waves bounce off of the nearest obstacle and are received again by the echo pin of the ultrasonic sensor. If the sensor is not properly functioning, call the delay() method in between outputting and inputting the sound. This duration of emitting and receiving soundwaves can be converted into the distance the robot is from the nearest obstacle by using the formula:
+My first milestone is plugging in and connecting the HC-SR04 ultrasonic sensor. The HC-SR04 ultrasonic sensor emits sound waves at a frequency above human hearing through the trig pin. The sound waves bounce off of the nearest obstacle and are received again by the echo pin of the ultrasonic sensor. If the sensor is not properly functioning, call the delay() method in between outputting and inputting the sound. This duration of emitting and receiving soundwaves can be converted into the distance the robot is from the nearest obstacle by using the formula:
 
 > distance = (speed of sound)(time taken)/2
 
@@ -44,12 +58,13 @@ I inserted the ultrasonic sensor into the breadboard and connected the male-to-m
 {:target="_blank" rel = "noopener"}
 -------------------------------------------------------------------------------------------
 # Reflection
+
 Through BlueStamp Engineering, I was able to learn more about robotics and create the obstacle avoiding robot. Sometimes, I had to troubleshoot, but I was able to persevere, understand the root cause of the issues, and think out-of-the-box to solve them. I thought like an engineer -- brainstorming new solutions and going one step at a time -- in order to finish and add modifications to this project. In the future, I will apply both my passion and my acquired knowledge to add more modifications and create new projects!
 
 -------------------------------------------------------------------------------------------
 # Materials
 * Arduino UNO
-* L298N Motor Controller
+* L298N Motor Driver
 * Smart Car Chassis Kit
   * 4 DC motors and wheels
 * HC-SR04 Ultrasonic Sensor
