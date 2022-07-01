@@ -1,3 +1,3 @@
-theme: jekyll-theme-merlot
+remote_theme: daattali/beautiful-jekyll
 markdown: kramdown
 
