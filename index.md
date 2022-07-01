@@ -63,7 +63,7 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 
 -------------------------------------------------------------------------------------------
 # Bill of Materials
-![Materials](/materials.png)
+![Materials](/billofmaterials.png)
 
 -------------------------------------------------------------------------------------------
 # Schematic
