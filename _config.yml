@@ -2,4 +2,4 @@ remote_theme: daattali/beautiful-jekyll
 markdown: kramdown
 nav:
  - Home: 'index.md'
- - First: 'first.md'
+ - First: 'milestone1.md'
