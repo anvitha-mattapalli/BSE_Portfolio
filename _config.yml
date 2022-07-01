@@ -1,5 +1,3 @@
-remote_theme: daattali/beautiful-jekyll
+theme: jekyll-merlot
 markdown: kramdown
-nav:
- - Home: 'index.md'
- - First: 'milestone1.md'
+
