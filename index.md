@@ -12,7 +12,7 @@ I designed a 4 wheel autonomous Arduino robot that can detect and maneuver aroun
 ![Headstone Image](/robot.png)
 -------------------------------------------------------------------------------------------  
 # Third Milestone
-My third milestone is completing the robot! I attached the new motor to the wheel and soldered the wires in place. I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a Servo to the ultrasonic sensor. When the robot stops, the Servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
+My third milestone is completing the robot! I attached the new motor to the wheel and soldered the wires in place. I programmed the robot to turn either right or left when confronted with an obstacle depending on which direction has the farther obstacle. To do this, I connected a servo to the ultrasonic sensor. When the robot stops, the servo will cause the ultrasonic sensor to turn left and right and determine the distance between itself and the nearest obstacle for each direction. The robot will turn in that direction and then continue to move forward until the next obstacle is faced.
 
 [![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
@@ -34,20 +34,20 @@ Through BlueStamp Engineering, I was able to learn more about robotics and creat
 
 -------------------------------------------------------------------------------------------
 # Materials
-- [ ] Arduino UNO
-- [ ] L298N Motor Controller
-- [ ] Smart Car Chassis Kit
-  - [ ] 4 DC motors and wheels
-- [ ] HC-SR04 Ultrasonic Sensor
-- [ ] SG90 Micro Servo
-- [ ] HC-05 Bluetooth Module
-- [ ] HW201 Infrared Sensor
-- [ ] Piezo Buzzer
-- [ ] Jumper Wires
-  - [ ] Male-to-Male
-  - [ ] Male-to-Female
-- [ ] Battery Pack
-- [ ] 9V Battery
+* Arduino UNO
+* L298N Motor Controller
+* Smart Car Chassis Kit
+  * 4 DC motors and wheels
+* HC-SR04 Ultrasonic Sensor
+* SG90 Micro Servo
+* HC-05 Bluetooth Module
+* HW201 Infrared Sensor
+* Piezo Buzzer
+* Jumper Wires
+  * Male-to-Male
+  * Male-to-Female
+* Battery Pack
+* 9V Battery
 
 -------------------------------------------------------------------------------------------
 # Schematic
