@@ -1,14 +1,6 @@
 ---
 permalink: /
 title: Obstacle Avoiding Robot
-navigation:
-  - section: Navigation
-  - document: overview_doc
-    label: First Milestone
-  - document: data_sources_doc
-    label: Second Milestone
-  - document: data_definitions_doc
-    label: Third Milestone
 ---
 # Introduction
 I designed a 4 wheel Arduino robot that can detect and maneuver around obstacles using an ultrasonic sensor. From this base project, I implemented voice control via HC-05 Bluetooth module and edge-avoiding characteristicsc with an infrared sensor.
@@ -100,8 +92,8 @@ void checkStart()
 }
 
 /** 
- * Continuously executes the command inputted by the user. If there is an obstacle within 5 inches, the buzzer will ring. The robot looks to the right
- * and left and goes in the direction with the clearer path.
+ * Continuously executes the command inputted by the user. If there is an obstacle within 5 inches, 
+ * the buzzer will ring. The robot looks to the right and left and goes in the direction with the clearer path.
  */
 void loop()
 { 
@@ -180,7 +172,10 @@ float ultraSonicMeasure()
    return inches;
 }
 
-/** The servo turns to the right for the ultrasonic sensor to determine the distance between the robot and the nearest obstacle from the right direction */
+/** 
+ * The servo turns to the right for the ultrasonic sensor to determine the distance between the robot and the 
+ * nearest obstacle from the right direction 
+ */
 float lookRight()
 {
   servo.write(0);
@@ -192,7 +187,10 @@ float lookRight()
   return dist;
 }
 
-/** The servo turns to the left for the ultrasonic sensor to determine the distance between the robot and the nearest obstacle from the left direction */
+/** 
+ * The servo turns to the left for the ultrasonic sensor to determine the distance between the robot and the 
+ * nearest obstacle from the left direction 
+ */
 float lookLeft()
 {
   servo.write(90);
