@@ -23,7 +23,7 @@ My second modification was edge-avoiding features. The servo allows the ultrason
 
 I pointed this sensor downwards so the sensor will always report the distance between the robot and the ground. The infrared sensor returns either LOW or HIGH, with LOW representing a low distance and HIGH representing a high distance. If there is a high distance between the robot and the ground, the robot is about to fall off an edge, so the robot moves backward and turns to the left or right depending on which direction has the clearer path.
 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
+[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1656691350/video_to_markdown/images/youtube--11uMgP9Z7bo-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/11uMgP9Z7bo "Final Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Third Milestone
 
@@ -32,7 +32,7 @@ My third milestone is completing the obstacle avoiding robot! I attached the new
 
 When the robot stops, the servo will turn 45 degrees to the left and right. In each direction, the ultrasonic sensor returns the distance between the robot an the nearest obstacle. The robot turns in the direction with the farther obstacle and continues moving forward until the next obstacle is reached.
 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
+[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1656691328/video_to_markdown/images/youtube--gs6b2CiMf_4-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/gs6b2CiMf_4 "Third Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # Second Milestone
 
@@ -44,7 +44,7 @@ To do this, the wires have to be attached to a thin copper ring on the DC motor.
 
 Certain motors are turned on and off through the digitalWrite() method in order to move forward and backward and to stop. For every iteration, before the moveForward() method is called, the ultrasonic sensor returns the distance between the robot and the nearest obstacle. If the distance is within 10 inches, the robot will stop. For my next milestone, I will add the decision-making feature to turn left or right after stopping at an obstacle.
 
-[![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1655936928/video_to_markdown/images/youtube--0JBKb5Npano-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/0JBKb5Npano "Second Milestone"){:target="_blank" rel="noopener"}
+[![Second Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1656691173/video_to_markdown/images/youtube--BR7kAzuG0cM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/BR7kAzuG0cM "Second Milestone"){:target="_blank" rel="noopener"}
 -------------------------------------------------------------------------------------------
 # First Milestone
   
